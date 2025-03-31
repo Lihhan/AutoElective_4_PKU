@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # filename: rule.py
-# modified: 2020-02-20
+# modified: 2025-03-31
 
 class Mutex(object):
 
