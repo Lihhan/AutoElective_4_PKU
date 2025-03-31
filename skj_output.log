@@ -1,0 +1,82 @@
+nohup: ignoring input
+[INFO] loop, 22:33:48, #--------------------------------------------#
+[INFO] loop, 22:33:48, # PKU Auto-Elective Tool v6.1.0 (2025.03.31) #
+[INFO] loop, 22:33:48, #--------------------------------------------#
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, > User Agent
+[INFO] loop, 22:33:48, ------------------------------
+[INFO] loop, 22:33:48, pool_size: 6402
+[INFO] loop, 22:33:48, ------------------------------
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, > Config
+[INFO] loop, 22:33:48, ------------------------------
+[INFO] loop, 22:33:48, is_dual_degree: True
+[INFO] loop, 22:33:48, identity: bzx
+[INFO] loop, 22:33:48, refresh_interval: 8.0
+[INFO] loop, 22:33:48, refresh_random_deviation: 0.2
+[INFO] loop, 22:33:48, supply_cancel_page: 1
+[INFO] loop, 22:33:48, iaaa_client_timeout: 30.0
+[INFO] loop, 22:33:48, elective_client_timeout: 60.0
+[INFO] loop, 22:33:48, login_loop_interval: 2.0
+[INFO] loop, 22:33:48, elective_client_pool_size: 2
+[INFO] loop, 22:33:48, elective_client_max_life: 600
+[INFO] loop, 22:33:48, is_print_mutex_rules: True
+[INFO] loop, 22:33:48, ------------------------------
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, ======== Loop 1 ========
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, > Current tasks
+[INFO] loop, 22:33:48, ------------------------------
+[INFO] loop, 22:33:48, 01. Course(简明量子力学, 1, 物理学院)
+[INFO] loop, 22:33:48, ------------------------------
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, > Current client: 1 (qsize: 2)
+[INFO] loop, 22:33:48, > Client expired time: -1
+[INFO] loop, 22:33:48, User-Agent: Mozilla/5.0 (Linux; Android 4.3; Galaxy Nexus Build/JWR67B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.117 Mobile Safari/537.36
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, client: 1 needs Login
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, ======== END Loop 1 ========
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, Try to login IAAA (client: 1)
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, User-Agent: Dalvik/2.1.0 (Linux; U; Android 9; V1932A Build/PKQ1.181030.001)
+[INFO] loop, 22:33:48, ======== Loop 2 ========
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, > Current tasks
+[INFO] loop, 22:33:48, ------------------------------
+[INFO] loop, 22:33:48, 01. Course(简明量子力学, 1, 物理学院)
+[INFO] loop, 22:33:48, ------------------------------
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, > Current client: 2 (qsize: 1)
+[INFO] loop, 22:33:48, > Client expired time: -1
+[INFO] loop, 22:33:48, User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4195.1 Safari/537.36
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, client: 2 needs Login
+[INFO] loop, 22:33:48, 
+[INFO] loop, 22:33:48, ======== END Loop 2 ========
+[INFO] loop, 22:33:48, 
+[ERROR] loop.error, 22:33:49, 'NoneType' object has no attribute 'group'
+Traceback (most recent call last):
+  File "/data/lihan/myproject/AutoElective_4_PKU/autoelective/loop.py", line 143, in run_iaaa_loop
+    sida = get_sida(r)
+  File "/data/lihan/myproject/AutoElective_4_PKU/autoelective/parser.py", line 50, in get_sida
+    return _regexBzfxSida.search(r.text).group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+[INFO] loop, 22:33:49, 
+[INFO] loop, 22:33:49, IAAA login loop sleep 2.0 s
+[INFO] loop, 22:33:49, 
+Exception in thread IAAA:
+Traceback (most recent call last):
+  File "/data/lihan/miniforge3/envs/marigold/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/data/lihan/miniforge3/envs/marigold/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/data/lihan/myproject/AutoElective_4_PKU/autoelective/loop.py", line 211, in run_iaaa_loop
+    raise e
+  File "/data/lihan/myproject/AutoElective_4_PKU/autoelective/loop.py", line 143, in run_iaaa_loop
+    sida = get_sida(r)
+  File "/data/lihan/myproject/AutoElective_4_PKU/autoelective/parser.py", line 50, in get_sida
+    return _regexBzfxSida.search(r.text).group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
